@@ -11,6 +11,7 @@ text = open(path.join(d, 'constitution.txt')).read()
 # Separate into a list of (word, frequency).
 words = wordcloud.process_text(text)
 # Compute the position of the words.
-elements = wordcloud.fit_words(words)
+elements = wordcloud.fit_words_old(words)
 # Draw the positioned words to a PNG file.
+print(elements)
 wordcloud.draw(elements, path.join(d, 'constitution.png'))
